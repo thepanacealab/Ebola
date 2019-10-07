@@ -8,7 +8,7 @@ Created on Tue Jul  9 08:38:07 2019
 from newspaper import Article 
 import pandas as pd 
 
-data = pd.read_csv("cidrap.csv") 
+data = pd.read_csv("who.csv") 
 
 df = pd.DataFrame(data, columns = ['date', 'url', 'title', 'text'])
 
@@ -48,6 +48,6 @@ for i in range(len(df)):
         df.loc[i,'text'] = "no result found"
 
 
-df.to_csv(r'cidrap_scraped.csv')
+df.to_csv(r'who_scraped.csv')
 
 
